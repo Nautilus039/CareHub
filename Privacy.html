@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Privacy Setting </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --medical-primary: #2a7f8d;
+            --medical-secondary: #d4edf4;
+            --medical-alert: #e63946;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .medical-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .medical-header {
+            background-color: var(--medical-primary);
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .medical-title {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        .medical-subtitle {
+            opacity: 0.9;
+            font-weight: 400;
+            margin: 0.5rem 0 0;
+        }
+        
+        .medical-settings {
+            padding: 2rem;
+        }
+        
+        .setting-group {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 1.5rem;
+        }
+        
+        .setting-group:last-child {
+            border-bottom: none;
+        }
+        
+        .group-title {
+            color: var(--medical-primary);
+            margin-bottom: 1.25rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .group-title i {
+            margin-right: 10px;
+        }
+        
+        .medical-setting {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f8fafb;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+        
+        .setting-info {
+            flex: 1;
+        }
+        
+        .setting-name {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        
+        .setting-desc {
+            color: #6c757d;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        .medical-toggle {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 26px;
+            margin-left: 1rem;
+        }
+        
+        .medical-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .medical-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .medical-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .medical-slider {
+            background-color: var(--medical-primary);
+        }
+        
+        input:checked + .medical-slider:before {
+            transform: translateX(24px);
+        }
+        
+        .btn-medical {
+            background-color: var(--medical-primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            transition: background 0.2s;
+        }
+        
+        .btn-medical:hover {
+            background-color: #1d6a77;
+        }
+        
+        .alert-setting {
+            border-left: 4px solid var(--medical-alert);
+        }
+    </style>
+</head>
+<body>
+    <div class="medical-container">
+        <div class="medical-header">
+            <h1 class="medical-title">Medical Privacy Center</h1>
+            <p class="medical-subtitle">Control how your health data is shared and stored</p>
+        </div>
+        
+        <div class="medical-settings">
+            <div class="setting-group">
+                <h2 class="group-title"><i class="fas fa-user-shield"></i> Health Data Sharing</h2>
+                
+                <div class="medical-setting">
+                    <div class="setting-info">
+                        <div class="setting-name">Share with healthcare providers</div>
+                        <div class="setting-desc">Allow doctors and hospitals to access your medical history</div>
+                    </div>
+                    <label class="medical-toggle">
+                        <input type="checkbox" checked>
+                        <span class="medical-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="medical-setting">
+                    <div class="setting-info">
+                        <div class="setting-name">Emergency access</div>
+                        <div class="setting-desc">Make critical health data available in emergencies</div>
+                    </div>
+                    <label class="medical-toggle">
+                        <input type="checkbox" checked>
+                        <span class="medical-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="setting-group">
+                <h2 class="group-title"><i class="fas fa-prescription-bottle-alt"></i> Medication Data</h2>
+                
+                <div class="medical-setting">
+                    <div class="setting-info">
+                        <div class="setting-name">Current medications visibility</div>
+                        <div class="setting-desc">Show your active prescriptions to healthcare providers</div>
+                    </div>
+                    <label class="medical-toggle">
+                        <input type="checkbox" checked>
+                        <span class="medical-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="medical-setting alert-setting">
+                    <div class="setting-info">
+                        <div class="setting-name">Allergy warnings</div>
+                        <div class="setting-desc">Always display allergy alerts to medical staff</div>
+                    </div>
+                    <label class="medical-toggle">
+                        <input type="checkbox" checked disabled>
+                        <span class="medical-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="setting-group">
+                <h2 class="group-title"><i class="fas fa-comment-medical"></i> Communications</h2>
+                
+                <div class="medical-setting">
+                    <div class="setting-info">
+                        <div class="setting-name">Appointment reminders</div>
+                        <div class="setting-desc">Receive notifications about upcoming appointments</div>
+                    </div>
+                    <label class="medical-toggle">
+                        <input type="checkbox" checked>
+                        <span class="medical-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="medical-setting">
+                    <div class="setting-info">
+                        <div class="setting-name">Medication alerts</div>
+                        <div class="setting-desc">Get reminders to take your medications</div>
+                    </div>
+                    <label class="medical-toggle">
+                        <input type="checkbox" checked>
+                        <span class="medical-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <button class="btn-medical">Save Privacy Settings</button>
+            <br>
+            <button onclick="window.location.href='Index.html'" class="btn-medical"> Exit </button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

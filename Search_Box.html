@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Search Results - CareHub</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/about us.css" />
+    <style>
+      .search-result-card {
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+      .search-result-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      .search-category-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+      }
+      .search-highlight {
+        background-color: #fffde7;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="main-container w-auto">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-center py-4">
+        <div class="d-flex justify-content-center">
+          <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarTogglerDemo01">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand me-4" href="">
+              <img src="img/Care_Hub_Logo_Transparent.png" height="90" alt="CareHub Logo" loading="lazy" style="margin-top: -1px;">
+            </a>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="about us.html">About Us</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="Contact_Us.html">Contact Us</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="Search_History.html">Search History</a>
+              </li>
+              <li class="nav-item mx-2 dropdown">
+                <a data-mdb-dropdown-init class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink">
+                  Explore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="Item_1.html">Symptoms</a></li>
+                  <li><a class="dropdown-item" href="Item_2.html">Medications</a></li>
+                  <li><a class="dropdown-item" href="Item_3.html">Doctors</a></li>
+                  <li><a class="dropdown-item" href="Item_4.html">Hospitals</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center" style="margin-left: 15px">
+              <div class="d-flex">
+                <form class="d-flex input-group w-auto" id="searchForm">
+                  <input type="search" class="form-control rounded" placeholder="Search across CareHub..." id="mainSearchInput">
+                  <button class="input-group-text border-0" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+              </div>
+              
+              <div class="dropdown" style="margin-left: 15px;">
+                <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40" alt="User Avatar">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="Sign in.html">My profile</a></li>
+                  <li><a class="dropdown-item" href="Privacy.html">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="body_t">
+        <div class="container py-5">
+          <h2 class="mb-4">Search Results</h2>
+          
+          <div id="searchResultsContainer">
+            <!-- Results will be dynamically inserted here -->
+          </div>
+          
+          <div id="noResults" class="text-center py-5" style="display: none;">
+            <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+            <h4>No results found</h4>
+            <p class="text-muted">Try different search terms</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer-section bg-info text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <h5>Contact us anytime</h5>
+              <p><strong>Call:</strong> +95 7788899588</p>
+              <p><strong>Email:</strong> carehub@gmail.com</p>
+            </div>
+            <div class="col-md-4 mb-4">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="Index.html" class="text-white">Home</a></li>
+                <li><a href="about us.html" class="text-white">About Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+              <h5>Subscribe to Our Newsletter</h5>
+              <form>
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Your email">
+                  <button class="btn btn-dark">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="text-center pt-3 border-top mt-3">
+            <p class="mb-0">&copy; 2025 CareHub. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+    
+    <!-- Search Functionality -->
+    <script>
+      // All data combined from your items
+      const allData = {
+        symptoms: [
+          {
+            title: "Diabetes",
+            desc: "Chronic disease with increased thirst, frequent urination, fatigue",
+            type: "Chronic disease",
+            medicines: "Metformin, Insulin",
+            link: "Item_1.html#diabetes"
+          },
+          {
+            title: "Asthma",
+            desc: "Respiratory condition causing wheezing, shortness of breath",
+            type: "Respiratory condition",
+            medicines: "Inhalers (Salbutamol, Budesonide), Montelukast",
+            link: "Item_1.html#asthma"
+          },
+          {
+            title: "Hypertension",
+            desc: "High blood pressure, often silent but may include headaches",
+            type: "Cardiovascular condition",
+            medicines: "Amlodipine, Losartan, Hydrochlorothiazide",
+            link: "Item_1.html#hypertension"
+          },
+          {
+            title: "Migraine",
+            desc: "Severe headache with nausea, sensitivity to light/sound",
+            type: "Neurological condition",
+            medicines: "Ibuprofen, Sumatriptan, Propranolol",
+            link: "Item_1.html#migraine"
+          },
+          {
+            title: "Influenza (Flu)",
+            desc: "Viral infection with fever, chills, muscle aches",
+            type: "Viral infection",
+            medicines: "Oseltamivir (Tamiflu), Paracetamol",
+            link: "Item_1.html#flu"
+          }
+        ],
+        medications: [
+          {
+            title: "Metformin",
+            desc: "For diabetes treatment",
+            dosage: "500-2000mg daily",
+            sideEffects: "GI upset, rare lactic acidosis",
+            link: "Item_2.html#metformin"
+          },
+          {
+            title: "Salbutamol Inhaler",
+            desc: "For asthma symptoms relief",
+            dosage: "As needed",
+            sideEffects: "Tremors, tachycardia",
+            link: "Item_2.html#salbutamol"
+          },
+          {
+            title: "Amlodipine",
+            desc: "For hypertension treatment",
+            dosage: "5-10mg daily",
+            sideEffects: "Edema, dizziness",
+            link: "Item_2.html#amlodipine"
+          },
+          {
+            title: "Sumatriptan",
+            desc: "For migraine relief",
+            dosage: "50-100mg as needed",
+            sideEffects: "Chest tightness, dizziness",
+            link: "Item_2.html#sumatriptan"
+          },
+          {
+            title: "Oseltamivir",
+            desc: "For influenza treatment",
+            dosage: "75mg twice daily for 5 days",
+            sideEffects: "Nausea, headache",
+            link: "Item_2.html#oseltamivir"
+          }
+        ],
+        doctors: [
+          {
+            title: "Dr. ဦးဂျော့(ချ်)လှိုင်မြ",
+            desc: "M.B.,B.S, MD, FRCS (Ed) -FACS, FHKAM, FHKCS, Diplomate, American Board of Internal Medicine",
+            specialty: "Internal Medicine",
+            link: "Item_3.html#dr1"
+          },
+          {
+            title: "Dr. ဦးစ၀်သီဟန်",
+            desc: "M.B.,B.S, M.Med.Sc (Surgery), Fellowship Training in Pediatric Surgery",
+            specialty: "Pediatric Surgery",
+            link: "Item_3.html#dr2"
+          },
+          {
+            title: "Dr. Kjeld Hougaard",
+            desc: "MD, Fellow of International Headache Society, Specialist in Diseases of the Nervous System",
+            specialty: "Neurology",
+            link: "Item_3.html#dr3"
+          },
+          {
+            title: "Dr. Eiji Fujimori",
+            desc: "D.D.S (University of Kanagawa Dental Japan)",
+            specialty: "Dentistry",
+            link: "Item_3.html#dr4"
+          },
+          {
+            title: "Dr. Praveen B.Pawal",
+            desc: "M.D, D.N.B (Cardiology)",
+            specialty: "Cardiology",
+            link: "Item_3.html#dr5"
+          }
+        ],
+        hospitals: [
+          {
+            title: "Yangon General Hospital",
+            desc: "Bo Aung Kyaw Street, Latha Township, Yangon",
+            hours: "Open 24 Hours",
+            type: "Government Hospital",
+            link: "Item_4.html#ygh"
+          },
+          {
+            title: "North Okkalapa General Hospital",
+            desc: "No. 1, Parami Road, North Okkalapa Township, Yangon",
+            hours: "Open 24 Hours",
+            type: "Government Hospital",
+            link: "Item_4.html#nogh"
+          },
+          {
+            title: "Asia Royal Hospital",
+            desc: "No. 14, Baho Road, Sanchaung Township, Yangon",
+            hours: "Open 24 Hours",
+            type: "Private Hospital",
+            link: "Item_4.html#arh"
+          },
+          {
+            title: "Pun Hlaing Siloam Hospital",
+            desc: "Pun Hlaing Avenue, Hlaing Tharyar Township, Yangon",
+            hours: "Open 24 Hours",
+            type: "Private Hospital",
+            link: "Item_4.html#phsh"
+          },
+          {
+            title: "International SOS Clinic",
+            desc: "12 Parami Road, Yankin Township, Yangon",
+            hours: "Mon-Fri: 8AM-5PM, Sat: 8AM-12PM",
+            type: "International Clinic",
+            link: "Item_4.html#sos"
+          }
+        ]
+      };
+
+      // Highlight matching text
+      function highlightText(text, searchTerm) {
+        if (!searchTerm) return text;
+        const regex = new RegExp(`(${searchTerm})`, 'gi');
+        return text.replace(regex, '<span class="search-highlight">$1</span>');
+      }
+
+      // Display search results
+      function displaySearchResults(searchTerm) {
+        const resultsContainer = document.getElementById('searchResultsContainer');
+        const noResults = document.getElementById('noResults');
+        
+        if (!searchTerm) {
+          noResults.style.display = 'block';
+          resultsContainer.innerHTML = '';
+          return;
+        }
+
+        let resultsHTML = '';
+        let hasResults = false;
+
+        // Search through all categories
+        const categories = [
+          { name: 'Symptoms', data: allData.symptoms, icon: 'fa-heartbeat' },
+          { name: 'Medications', data: allData.medications, icon: 'fa-pills' },
+          { name: 'Doctors', data: allData.doctors, icon: 'fa-user-md' },
+          { name: 'Hospitals', data: allData.hospitals, icon: 'fa-hospital' }
+        ];
+
+        categories.forEach(category => {
+          const categoryResults = category.data.filter(item => {
+            // Search in all relevant fields
+            const searchFields = [item.title, item.desc];
+            if (item.type) searchFields.push(item.type);
+            if (item.medicines) searchFields.push(item.medicines);
+            if (item.specialty) searchFields.push(item.specialty);
+            if (item.hours) searchFields.push(item.hours);
+            if (item.dosage) searchFields.push(item.dosage);
+            if (item.sideEffects) searchFields.push(item.sideEffects);
+            
+            return searchFields.some(field => 
+              field.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+          });
+
+          if (categoryResults.length > 0) {
+            hasResults = true;
+            resultsHTML += `
+              <div class="mb-5">
+                <h3 class="mb-4">
+                  <i class="fas ${category.icon} me-2"></i>${category.name}
+                </h3>
+                <div class="row">
+                  ${categoryResults.map(item => `
+                    <div class="col-md-6 col-lg-4 mb-4">
+                      <div class="card search-result-card h-100">
+                        <div class="card-body position-relative">
+                          <span class="badge bg-primary search-category-badge">${category.name}</span>
+                          <h5 class="card-title">${highlightText(item.title, searchTerm)}</h5>
+                          <p class="card-text">${highlightText(item.desc, searchTerm)}</p>
+                          ${item.type ? `<p><strong>Type:</strong> ${highlightText(item.type, searchTerm)}</p>` : ''}
+                          ${item.medicines ? `<p><strong>Medicines:</strong> ${highlightText(item.medicines, searchTerm)}</p>` : ''}
+                          ${item.specialty ? `<p><strong>Specialty:</strong> ${highlightText(item.specialty, searchTerm)}</p>` : ''}
+                          ${item.hours ? `<p><strong>Hours:</strong> ${highlightText(item.hours, searchTerm)}</p>` : ''}
+                          ${item.dosage ? `<p><strong>Dosage:</strong> ${highlightText(item.dosage, searchTerm)}</p>` : ''}
+                          ${item.sideEffects ? `<p><strong>Side Effects:</strong> ${highlightText(item.sideEffects, searchTerm)}</p>` : ''}
+                          <a href="${item.link}" class="btn btn-primary mt-2">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            `;
+          }
+        });
+
+        if (hasResults) {
+          resultsContainer.innerHTML = resultsHTML;
+          noResults.style.display = 'none';
+        } else {
+          resultsContainer.innerHTML = '';
+          noResults.style.display = 'block';
+        }
+      }
+
+      // Handle page load
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get search term from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchTerm = urlParams.get('q');
+        
+        // Set search input value
+        if (searchTerm) {
+          document.getElementById('mainSearchInput').value = searchTerm;
+          displaySearchResults(searchTerm);
+        }
+
+        // Handle new searches
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const newSearchTerm = document.getElementById('mainSearchInput').value.trim();
+          if (newSearchTerm) {
+            // Update URL without reloading
+            window.history.pushState({}, '', `search.html?q=${encodeURIComponent(newSearchTerm)}`);
+            displaySearchResults(newSearchTerm);
+          }
+        });
+
+        // Initialize MDB components
+        new mdb.Tab(document.getElementById('v-pills-symptoms-tab'));
+        new mdb.Dropdown(document.getElementById('navbarDropdownMenuLink'));
+        new mdb.Dropdown(document.getElementById('navbarDropdownMenuAvatar'));
+      });
+    </script>
+  </body>
+</html>

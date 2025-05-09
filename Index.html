@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> Home Page </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/Index.css" />
+  <style>
+      /* Custom Healthcare Theme Styles */
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f8f9fa;
+      }
+      
+      /* Hero Section with Medical Background */
+      .carousel-item-active {
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .mask {
+        background: linear-gradient(to right, rgba(13, 110, 253, 0.8), rgba(25, 135, 84, 0.8)) !important;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      
+      .msk_box {
+        width: 100%;
+        padding: 0 5%;
+      }
+      
+      .txt_box_h {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        margin-bottom: 1rem;
+      }
+      
+      .txt_box_p {
+        font-size: 1.5rem;
+        color: white;
+        max-width: 600px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Feature Cards Section */
+      .body_t {
+        display: flex;
+        justify-content: space-around;
+        padding: 3rem 5%;
+        flex-wrap: wrap;
+        background-color: white;
+      }
+      
+      .lb {
+        width: 30%;
+        min-width: 300px;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        border: none;
+        color: #0d6efd;
+      }
+      
+      .lb:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(13, 110, 253, 0.2);
+        background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);
+        text-decoration: none;
+      }
+      
+      .hd {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #0a58ca;
+      }
+      
+      .pg {
+        font-size: 1rem;
+        color: #495057;
+      }
+      
+      /* Healthcare Color Scheme */
+      .bg-primary {
+        background-color: #0d6efd !important; /* Blue */
+      }
+      
+      .btn-primary {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+      }
+      
+      .bg-info {
+        background-color: #0dcaf0 !important; /* Teal */
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="main-container w-auto">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-center py-4">
+        <div class="d-flex justify-content-center">
+          <button
+            data-mdb-collapse-init
+            class="navbar-toggler"
+            type="button"
+            data-mdb-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand me-4" href="Index.html">
+              <img
+                src="img/Care_Hub_Logo_Transparent.png"
+                height="90"
+                alt="CareHub Logo"
+                loading="lazy"
+                style="margin-top: -1px;"
+              />
+            </a>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="about us.html">About Us</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="Contact_Us.html">Contact Us</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="Search_Histroy.html">Search History</a>
+              </li>
+              <li class="nav-item mx-2 dropdown">
+                <a 
+                data-mdb-dropdown-init
+                class="nav-link dropdown-toggle hidden-arrow"
+                id="navbarDropdownMenuLink"
+                role="button"
+                aria-expanded="false"
+                href="#"> 
+                  Explore 
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="Item_1.html">Symptoms</a></li>
+                  <li><a class="dropdown-item" href="Item_2.html">Medications</a></li>
+                  <li><a class="dropdown-item" href="Item_3.html">Doctors</a></li>
+                  <li><a class="dropdown-item" href="Item_4.html">Hospitals</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center" style="margin-left: 15px">
+              <div class="d-flex">
+
+                <form class="d-flex input-group w-auto" id="medicationSearchForm">
+                        <input
+                          type="search"
+                          class="form-control rounded"
+                          placeholder="Search for Medication"
+                          aria-label="Search"
+                          aria-describedby="search-addon"
+                          id="medicationSearchInput"
+                        />
+                        <button type="submit" class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+              </div>
+              
+              <!-- Avatar -->
+              <div class="dropdown" style="margin-left: 15px;">
+                <a
+                  data-mdb-dropdown-init
+                  class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                  href="#"
+                  id="navbarDropdownMenuAvatar"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    class="rounded-circle"
+                    height="40"
+                    alt="User Avatar"
+                    loading="lazy"
+                  />
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                  <li><a class="dropdown-item" href="Sign in.html">My profile</a></li>
+                  <li><a class="dropdown-item" href="Privacy.html">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
+        <div class="carousel-inner">
+          <div class="carousel-item active bg-image">
+            <img src="img/Medical_Vector.jpg" class="d-block w-100" alt="Healthcare Professionals"/>
+            <div class="mask">  
+              <div class="msk_box">
+                <div class="txt_box">
+                  <h1 class="txt_box_h">Your Health Companion</h1>
+                  <p class="txt_box_p">Find symptoms to solutions with our comprehensive healthcare platform</p>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="body_t">
+        <a class="lb" href="Item_1.html">
+          <h3 class="hd"><i class="fas fa-heartbeat me-2"></i> Search For Symptoms</h3>
+          <p class="pg">Find suitable medications and treatments for your symptoms</p>
+        </a>
+
+        <a class="lb" href="Item_2.html">
+          <h3 class="hd"><i class="fas fa-pills me-2"></i> Search Medicine</h3>
+          <p class="pg">Explore our comprehensive medication database</p>
+        </a>
+
+        <a class="lb" href="Item_3.html">
+          <h3 class="hd"><i class="fas fa-user-md me-2"></i> Find Doctors</h3>
+          <p class="pg">Connect with qualified healthcare professionals</p>
+        </a>
+      </div>
+
+      <!-- Footer -->
+          <footer class="footer-section bg-info text-white pt-5 pb-4">
+            <div class="container text-center text-md-start">
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <h5>Contact us anytime</h5>
+                  <p><strong>Call:</strong> +95 7788899588</p>
+                  <p><strong>Email:</strong> carehub@gmail.com</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <h5>Quick Links</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="Index.html" class="text-white">Home</a></li>
+                    <li><a href="about us.html" class="text-white">About Us</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <h5>Subscribe to Our Newsletter</h5>
+                  <form>
+                    <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Your email">
+                      <button class="btn btn-dark">Subscribe</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="text-center pt-3 border-top mt-3">
+                <p class="mb-0">&copy; 2025 CareHub. All rights reserved.</p>
+              </div>
+            </div>
+          </footer>
+        <!-- Footer --> 
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize carousel
+        new mdb.Carousel(document.getElementById('carouselExampleSlidesOnly'));
+        
+        // Initialize dropdowns
+        const dropdownElements = document.querySelectorAll('[data-mdb-dropdown-init]');
+        dropdownElements.forEach(el => {
+          new mdb.Dropdown(el);
+        });
+      });
+    </script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize components
+    new mdb.Carousel(document.getElementById('carouselExampleSlidesOnly'));
+    
+    const dropdownElements = document.querySelectorAll('[data-mdb-dropdown-init]');
+    dropdownElements.forEach(el => {
+      new mdb.Dropdown(el);
+    });
+
+    // Medication search functionality
+    const searchForm = document.getElementById('medicationSearchForm');
+    const searchInput = document.getElementById('medicationSearchInput');
+    
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const searchTerm = searchInput.value.trim();
+      
+      if (searchTerm) {
+        // Here you would typically make an API call or filter local data
+        // For now, we'll redirect to the medications page with the search term
+        window.location.href = `Item_2.html?search=${encodeURIComponent(searchTerm)}`;
+        
+        // Alternatively, you could show results on this page:
+        // searchMedications(searchTerm);
+      }
+    });
+
+    // Example function for client-side search (if you have local data)
+    function searchMedications(searchTerm) {
+      // This would be replaced with your actual data source
+      const medications = [
+        { name: "Ibuprofen", description: "Pain reliever and fever reducer" },
+        { name: "Amoxicillin", description: "Antibiotic for bacterial infections" },
+        // ... more medications
+      ];
+      
+      const results = medications.filter(med => 
+        med.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      
+      displayResults(results);
+    }
+
+    function displayResults(results) {
+      // Create a modal or section to display results
+      // This is just a basic example
+      alert(`Found ${results.length} medications matching your search`);
+      console.log(results);
+    }
+  });
+</script>
+  </body>
+</html>
