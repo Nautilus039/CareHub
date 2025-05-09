@@ -1,0 +1,45 @@
+.body_t {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.privacy-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.setting-item {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.setting-item:hover {
+    background-color: #f1f5f9;
+}
+
+.form-check-input {
+    width: 3em;
+    height: 1.5em;
+}
+
+.form-switch .form-check-input {
+    cursor: pointer;
+}
+
+.btn-primary {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-medical{
+    color: white;
+}
